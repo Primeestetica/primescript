@@ -1,0 +1,20 @@
+#muzica {
+  position: absolute;
+  left: 31%;
+  top: 235%;
+  padding: 0 20px;
+  width: 35%;
+  text-align: center;
+}
+
+#nombre{
+  border: 3px solid rgb(0, 9, 92);
+  background:rgb(0, 0, 0) ;
+}
+
+#letras{
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  text-shadow: rgb(0, 26, 255);
+  -webkit-text-stroke: rgb(0, 26, 255);
+  -webkit-text-stroke-width: 4px;
+}
