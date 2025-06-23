@@ -13,23 +13,7 @@
 
     html, body {
       margin: 0; padding: 0; height: 100%; font-family: 'Montserrat', sans-serif; overflow-x: hidden; background: #000;
-      scroll-behavior: smooth;
     }
-    header {
-      position: fixed; top: 0; left: 0; width: 100%; background: rgba(0,0,0,0.6);
-      padding: 10px 0; text-align: center; z-index: 999;
-    }
-    header img {
-      width: 200px;
-    }
-    .nav-buttons {
-      margin-top: 10px;
-    }
-    .nav-buttons button {
-      padding: 10px 20px; margin: 5px; border: none; border-radius: 5px;
-      background: #00ADEF; color: #fff; font-size: 16px; cursor: pointer; transition: 0.3s;
-    }
-    .nav-buttons button:hover { background: #0086be; transform: scale(1.05); }
     .hero-fullscreen {
       position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;
     }
@@ -37,12 +21,31 @@
       width: 100%; height: 100%; object-fit: cover; position: fixed; top: 0; left: 0; z-index: -1;
     }
     .content {
-      position: relative; z-index: 1; padding: 120px 20px 80px; max-width: 900px; margin: auto; color: #fff; text-align: center;
+      position: relative; z-index: 1; padding: 100px 20px; max-width: 900px; margin: auto; color: #fff; text-align: center;
       animation: fadeIn 1s ease;
     }
     h1 { font-size: 36px; margin-bottom: 10px; }
     h2 { font-size: 28px; margin-top: 50px; }
     p { font-size: 18px; line-height: 1.6; }
+    .nav-buttons button {
+      padding: 15px 30px; margin: 15px; border: none; border-radius: 8px;
+      background: #00ADEF; color: #fff; font-size: 18px; cursor: pointer; transition: 0.3s;
+    }
+    .nav-buttons button:hover { background: #0086be; transform: scale(1.05); }
+    .whatsapp-float {
+      position: fixed; bottom: 20px; right: 20px; z-index: 999; background: #25D366; padding: 15px; border-radius: 50%;
+    }
+    .whatsapp-float img { width: 50px; height: 50px; }
+    .insta-link {
+      position: fixed; bottom: 20px; left: 20px; z-index: 999; background: #fff; padding: 10px; border-radius: 8px; color: #000;
+      text-decoration: none; font-weight: bold; font-size: 14px;
+    }
+    .logo {
+      width: 400px; max-width: 90%; margin: 0 auto 30px; animation: fadeIn 2s ease; display: block;
+    }
+    @media (max-width: 768px) {
+      .logo { width: 300px; }
+    }
     form input, form textarea {
       width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;
     }
@@ -50,62 +53,60 @@
       padding: 10px 20px; border: none; border-radius: 5px; background: #00ADEF; color: #fff; font-size: 16px; cursor: pointer;
       transition: 0.3s;
     }
-    form button:hover { background: #0086be; transform: scale(1.05); }
-    .whatsapp-float {
-      position: fixed; bottom: 20px; right: 20px; z-index: 999; background: #25D366; padding: 15px; border-radius: 50%;
+    form button:hover {
+      background: #0086be; transform: scale(1.05);
     }
-    .whatsapp-float img { width: 50px; height: 50px; }
-    footer {
-      background: rgba(0,0,0,0.8); color: #fff; padding: 20px 0; text-align: center; font-size: 14px;
+    .whatsapp-call {
+      margin-top: 20px; padding: 10px 20px; background: #25D366; color: #fff; border: none; border-radius: 5px; font-size: 18px;
+      cursor: pointer; text-decoration: none; display: inline-block; transition: 0.3s;
+    }
+    .whatsapp-call:hover {
+      background: #1ebe5d; transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="img/prime-pronto-fundo-transparente.png" alt="Prime Estética Automotiva">
-  <div class="nav-buttons">
-    <button onclick="location.href='#home'">Início</button>
-    <button onclick="location.href='#lavagem'">Lavagens</button>
-    <button onclick="location.href='#polimento'">Polimentos</button>
-    <button onclick="location.href='#sobre'">Sobre</button>
-    <button onclick="location.href='#orcamento'">Orçamento</button>
-  </div>
-</header>
-
 <div class="hero-fullscreen">
-  <iframe src="https://www.youtube.com/embed/CyAwHe5ty-4?autoplay=1&mute=1&controls=0&loop=1&playlist=CyAwHe5ty-4&playsinline=1"
-    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/CyAwHe5ty-4?autoplay=1&mute=1&controls=0&loop=1&playlist=CyAwHe5ty-4&playsinline=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-<div class="content" id="home">
-  <h1>Bem-vindo à Prime Estética Automotiva</h1>
-  <p>Detalhamento automotivo de alto padrão para realçar e proteger seu veículo.</p>
+<div class="content">
+  <img src="img/prime-pronto-fundo-transparente.png" alt="Prime Estética Automotiva" class="logo">
+  <div class="nav-buttons">
+    <button onclick="location.href='#lavagem'">Lavagens</button>
+    <button onclick="location.href='#polimento'">Polimentos</button>
+    <button onclick="location.href='#sobre'">Sobre Nós</button>
+    <button onclick="location.href='#orcamento'">Orçamento</button>
+  </div>
 </div>
 
 <div class="content" id="lavagem">
-  <h2>Lavagens Premium</h2>
-  <p>Lavagem Técnica a partir de R$149,90<br> Higienização Interna a partir de R$499,99</p>
-  <a href="https://wa.me/5561982209911" target="_blank">Chamar no WhatsApp</a>
+  <h1>Lavagens</h1>
+  <p><strong>Lavagem Técnica:</strong> A partir de R$149,90<br>
+     <strong>Higienização Interna:</strong> A partir de R$499,99</p>
+  <a class="whatsapp-call" href="https://wa.me/5561982209911" target="_blank">Chamar no WhatsApp</a>
 </div>
 
 <div class="content" id="polimento">
-  <h2>Polimentos e Vitrificações</h2>
-  <p>Polimento Técnico a partir de R$749,90<br> Vitrificação: 1, 3 ou 5 anos<br> PPF Frontal ou Total</p>
-  <a href="https://wa.me/5561982209911" target="_blank">Chamar no WhatsApp</a>
+  <h1>Polimentos</h1>
+  <p><strong>Polimento Técnico:</strong> A partir de R$749,90<br>
+     <strong>Vitrificação:</strong> Planos de 1, 3 ou 5 anos<br>
+     <strong>PPF:</strong> Frontal ou Total com TPU/TPH</p>
+  <a class="whatsapp-call" href="https://wa.me/5561982209911" target="_blank">Chamar no WhatsApp</a>
 </div>
 
 <div class="content" id="sobre">
-  <h2>Sobre a Prime</h2>
-  <p>Somos referência em detalhamento automotivo premium, utilizando tecnologia de ponta para resultados superiores.</p>
+  <h1>Sobre Nós</h1>
+  <p>A Prime Estética Automotiva é referência em detalhamento premium, polimento técnico e vitrificação. Nossa missão é realçar a beleza e proteger o veículo dos nossos clientes com tecnologia de ponta e atendimento personalizado.</p>
 </div>
 
 <div class="content" id="orcamento">
-  <h2>Solicite um Orçamento</h2>
+  <h1>Solicite um Orçamento</h1>
   <form action="https://formsubmit.co/seuemail@exemplo.com" method="POST">
     <input type="text" name="name" placeholder="Seu nome" required>
     <input type="email" name="email" placeholder="Seu e-mail" required>
-    <textarea name="message" placeholder="Descreva o serviço" required></textarea>
+    <textarea name="message" placeholder="Descreva o serviço desejado" required></textarea>
     <button type="submit">Enviar</button>
   </form>
 </div>
@@ -114,9 +115,7 @@
   <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
 </a>
 
-<footer>
-  © 2025 Prime Estética Automotiva | Brasília - DF | Instagram: @estetica.automotiva.prime
-</footer>
+<a class="insta-link" href="https://instagram.com/estetica.automotiva.prime" target="_blank">@estetica.automotiva.prime</a>
 
 </body>
 </html>
