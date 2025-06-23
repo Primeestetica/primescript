@@ -39,29 +39,37 @@
         type="text/css">
 <!--Esta letra da muchisimo por culo-->
 
+
 <style>
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .hero-fullscreen {
     width: 100%;
     height: 100vh;
+    position: fixed; /* Faz o vídeo ficar sempre no fundo fixo */
+    top: 0;
+    left: 0;
+    z-index: -1;
     background-size: cover !important;
     background-position: center !important;
 }
 
-#videoContainment, .bg-img-YT {
+#videoContainment, .bg-img-YT, iframe {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover;
-    position: absolute;
+    position: fixed; /* Fixar o iframe também */
     top: 0;
     left: 0;
+    z-index: -1;
 }
 </style>
+
 
 </head>
 
