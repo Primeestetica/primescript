@@ -226,3 +226,24 @@ form button:hover {
   object-fit: cover;
   aspect-ratio: 16/9;
 }
+
+.rotate-phone-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.phone-icon {
+  font-size: 2.5em;
+  animation: rotatePhone 2.5s ease-in-out infinite;
+}
+
+@keyframes rotatePhone {
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(90deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
