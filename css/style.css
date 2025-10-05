@@ -125,31 +125,6 @@ footer {
   margin-right: -150px;
 }
 
-.googlemaps-float, .googlemaps {
-  position: fixed;
-  bottom: 15px;
-  width: 35px;
-  z-index: -1;
-}
-
-.googlemaps-float { right: 15px; }
-.googlemaps-float {
-  right: 65px;
-  display: flex;
-  align-items: center;
-  font-size: 0.6em;
-  color: #fff;
-}
-
-.googlemaps-float img {
-  width: 30px;
-  margin-right: -40px;
-}
-
-.googlemaps-float img {
-  width: 28px;
-  margin-right: -150px;
-}
 
 @media (max-width: 600px) {
   .googlemaps-float span {
