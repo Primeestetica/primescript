@@ -248,3 +248,17 @@ form button:hover {
   60% { transform: rotate(0deg); }
   100% { transform: rotate(0deg); }
 }
+
+
+/* Botão flutuante Google Maps */
+.googlemaps-float {
+  position: fixed;
+  bottom: 15px;
+  right: 125px;
+  z-index: 999;
+}
+
+.googlemaps-float img {
+  width: 50px;
+}
+
